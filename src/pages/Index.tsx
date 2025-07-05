@@ -1,11 +1,10 @@
-
 import { useState } from 'react';
 import ImageUpload from '../components/ImageUpload';
 import ClassificationResult from '../components/ClassificationResult';
 import SVMInfo from '../components/SVMInfo';
 import DatasetShowcase from '../components/DatasetShowcase';
 
-export interface ClassificationResult {
+export interface ClassificationData {
   prediction: 'cat' | 'dog';
   confidence: number;
   processingTime: number;
@@ -13,7 +12,7 @@ export interface ClassificationResult {
 
 const Index = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [classificationResult, setClassificationResult] = useState<ClassificationResult | null>(null);
+  const [classificationResult, setClassificationResult] = useState<ClassificationData | null>(null);
   const [isProcessing, setIsProcessing] = useState(false);
 
   const handleImageUpload = (imageUrl: string) => {

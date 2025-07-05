@@ -1,11 +1,10 @@
-
 import { Brain, Clock, TrendingUp } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
-import { ClassificationResult } from '../pages/Index';
+import { ClassificationData } from '../pages/Index';
 
 interface ClassificationResultProps {
-  result: ClassificationResult | null;
+  result: ClassificationData | null;
   isProcessing: boolean;
   imageUrl: string;
 }
